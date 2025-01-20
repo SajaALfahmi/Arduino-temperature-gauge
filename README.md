@@ -34,7 +34,7 @@ The purpose of this document is to define the requirements for the Arduino Body 
 ## System Design
 
 ## Modules
-- Measurement Module:
-  The GY-906 sensor uses infrared technology to measure the temperature of the object and the surrounding environment.
-- Display Module (Optional):
-  Displays the temperature readings in real-time on an LCD screen or via the serial monitor.
+## Measurement Module:
+   - The GY-906 sensor uses infrared technology to measure the temperature of the object and the surrounding environment.
+  ## Display Module (Optional):
+ - Displays the temperature readings in real-time on an LCD screen or via the serial monitor.
