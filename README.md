@@ -8,12 +8,11 @@ The purpose of this document is to define the requirements for the Arduino Body 
 
 ## Requirements
 -  Hardware
-  | Component         | Specification                          |
-|--------------------|----------------------------------------|
-| Microcontroller    | Arduino Uno                           |
-| Temperature sensor | GY-906                                |
-| Display system     | LCD                                   |
-| Connecting Wires   | Jumper wires (male-to-male, male-to-female) |
+ Microcontroller: Arduino Uno.
+Ultrasonic Sensor: HC-SR04 for object detection.
+Soil Moisture Sensor: Analog sensor (range: 0–1023) for waste classification.
+Servo Motor: SG90.
+Connecting Wires: Male-to-male and male-to-female jumper wires.
 
 -  software
   Arduino IDE: For writing and uploading the code to the microcontroller
@@ -27,20 +26,9 @@ Connect the microcontroller to your computer via USB.
 Upload the code to the microcontroller.
 
 
-## Installation
+## System Design
 
-
-# اسم المشروع
-وصف موجز للمشروع.
-
-## المميزات
-- ميزة 1
-- ميزة 2
-
-## المتطلبات
-- متطلب 1
-- متطلب 2
-
-## التثبيت
-
-# الأوامر اللازمة لتثبيت المشر
+- Measurement Module:
+  The GY-906 sensor uses infrared technology to measure the temperature of the object and the surrounding environment.
+- Display Module (Optional):
+  Displays the temperature readings in real-time on an LCD screen or via the serial monitor.
