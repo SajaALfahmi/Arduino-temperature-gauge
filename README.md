@@ -9,14 +9,16 @@ The purpose of this document is to define the requirements for the Arduino Body 
 - System Health Monitoring
 
 ## Requirements
--  Hardware
- Microcontroller: Arduino Uno.
-Ultrasonic Sensor: HC-SR04 for object detection.
-Soil Moisture Sensor: Analog sensor (range: 0–1023) for waste classification.
-Servo Motor: SG90.
-Connecting Wires: Male-to-male and male-to-female jumper wires.
 
--  software
+## Hardware
+  
+- Microcontroller: Arduino Uno.
+- Ultrasonic Sensor: HC-SR04 for object detection.
+ - Soil Moisture Sensor: Analog sensor (range: 0–1023) for waste classification.
+- Servo Motor: SG90.
+- Connecting Wires: Male-to-male and male-to-female jumper wires.
+
+ ## software
   Arduino IDE: For writing and uploading the code to the microcontroller
 
   ## How to Use
