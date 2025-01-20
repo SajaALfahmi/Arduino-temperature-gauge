@@ -5,6 +5,8 @@ The purpose of this document is to define the requirements for the Arduino Body 
 ## Features
 - Body Temperature Measurement
 - Real-time Data Display
+- Accurate Temperature Detection
+- System Health Monitoring
 
 ## Requirements
 -  Hardware
