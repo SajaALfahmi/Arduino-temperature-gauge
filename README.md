@@ -24,10 +24,11 @@ The purpose of this document is to define the requirements for the Arduino Body 
   ## How to Use
 
   - Setup the System:
-Assemble the hardware components as per the circuit design.
-Load the Arduino sketch into the Arduino IDE.
-Connect the microcontroller to your computer via USB.
-Upload the code to the microcontroller.
+    
+       Assemble the hardware components as per the circuit design.
+       Load the Arduino sketch into the Arduino IDE.
+       Connect the microcontroller to your computer via USB.
+       Upload the code to the microcontroller.
 
 
 ## System Design
