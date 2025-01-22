@@ -1,38 +1,56 @@
-# Arduino-temperature-gauge
+# Arduino Body Temperature Monitoring System
 
-The purpose of this document is to define the requirements for the Arduino Body Temperature Monitoring System project. It includes the hardware requirements, functional and non-functional requirements, use cases, user stories, scenarios, and acceptance criteria necessary for the successful implementation of the system.
+This document outlines the details of the Arduino Body Temperature Monitoring System project, including its hardware and software requirements, features, system design, and usage instructions. The system now includes an alert mechanism with a buzzer to notify users when high temperatures are detected.
 
 ## Features
-- Body Temperature Measurement
-- Real-time Data Display
-- Accurate Temperature Detection
-- System Health Monitoring
+- **Body Temperature Measurement:** Measures the temperature using the GY-906 infrared temperature sensor.
+- **Real-time Data Display:** Displays temperature readings on an LCD screen.
+- **Accurate Temperature Detection:** Ensures precise temperature readings.
+- **Alert System:** Activates a buzzer alarm when the temperature exceeds a predefined threshold.
+- **System Health Monitoring:** Monitors the functionality of components in real-time.
 
 ## Requirements
 
-## Hardware
-  
-- Microcontroller: Arduino Uno.
-- Ultrasonic Sensor: HC-SR04 for object detection.
- - Soil Moisture Sensor: Analog sensor (range: 0–1023) for waste classification.
-- Servo Motor: SG90.
-- Connecting Wires: Male-to-male and male-to-female jumper wires.
+### Hardware
+- **Microcontroller:** Arduino Uno.
+- **Temperature Sensor:** GY-906 for accurate infrared temperature readings.
+- **Buzzer:** Provides an audible alert for high-temperature warnings.
+- **LCD Screen:** Displays temperature readings in real-time.
+- **Connecting Wires:** Male-to-male and male-to-female jumper wires.
+- **Power Supply:** USB cable or external power source for the Arduino board.
 
- ## software
-  Arduino IDE: For writing and uploading the code to the microcontroller
+### Software
+- **Arduino IDE:** For writing, debugging, and uploading the code to the Arduino Uno.
 
-  ## How to Use
+## How to Use
 
-  - Setup the System:
-    
-       Assemble the hardware components as per the circuit design.
-       Load the Arduino sketch into the Arduino IDE.
-       Connect the microcontroller to your computer via USB.
-       Upload the code to the microcontroller.
-
+1. **Setup the System:**
+   - Assemble the hardware components as per the circuit diagram.
+   - Ensure proper connections between the GY-906 sensor, buzzer, LCD screen, and Arduino Uno.
+2. **Load the Code:**
+   - Open the Arduino IDE.
+   - Load the provided Arduino sketch.
+   - Connect the Arduino Uno to your computer via USB.
+   - Upload the code to the Arduino Uno.
+3. **Operate the System:**
+   - Power the Arduino Uno.
+   - Monitor the LCD screen for temperature readings.
+   - Listen for the buzzer alert if the temperature exceeds the set threshold.
 
 ## System Design
 
-## Modules
-- Measurement Module: The GY-906 sensor uses infrared technology to measure the temperature of the object and the surrounding environment.
-- Display Module (Optional): Displays the temperature readings in real-time on an LCD screen or via the serial monitor.
+### Modules
+1. **Measurement Module:**
+   - Uses the GY-906 infrared sensor to measure body and ambient temperature.
+   - Reads temperature data continuously for real-time monitoring.
+
+2. **Display Module:**
+   - Shows the temperature readings on an LCD screen or through the Arduino serial monitor.
+
+3. **Alert Module:**
+   - Activates the buzzer when the temperature exceeds a specified threshold, ensuring timely notifications for high-temperature conditions.
+
+## Future Enhancements
+- Integrating wireless communication (e.g., Bluetooth or Wi-Fi) for remote monitoring.
+- Adding a feature to log temperature data over time.
+- Providing a mobile or web interface for user convenience.
