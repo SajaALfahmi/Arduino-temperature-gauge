@@ -1,6 +1,6 @@
 # Arduino Body Temperature Monitoring System
 
-This document outlines the details of the Arduino Body Temperature Monitoring System project, including its hardware and software requirements, features, system design, and usage instructions. The system now includes an alert mechanism with a buzzer to notify users when high temperatures are detected.
+This document outlines the details of the Arduino Body Temperature Monitoring System project, including its hardware and software requirements, features, system design, and usage instructions.
 
 ## Features
 - **Body Temperature Measurement:** Measures the temperature using the GY-906 infrared temperature sensor.
