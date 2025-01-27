@@ -1,0 +1,77 @@
+
+
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// LCD setup
+LiquidCrystal_I2C LCDs (0x27, 16, 2);
+
+const int buzzpin = 9; // buzzer pin
+const int SensorPin = A0; // sensor pin
+float lastTemp = 0; // took the last correct reading
+
+// Function to read temperature with improvements
+float readTemp(int pin) {
+const int numReadings = 10; // number of readings to take the bread
+float total = 0;
+
+for (int i = 0; i < numReadings; i++) {
+int SensorValue =analogRead(pin);
+float voltage = sensorValue * (5.0 / 1023.0); // Convert reading to voltage
+Total += voltage * 100.0; // Convert voltage to temperature
+Delay(10); // Short delay between readings
+}
+
+Return total/number of readings; // Return average temperature
+}
+
+void setup() {
+Serial.begin(9600); // Start serial communication
+
+lcd.init(); // Initialize the display
+lcd.backlight();
+lcd.setCursor(0, 0);
+lcd.print("Temperature sensor test");
+
+pinMode(buzpin, OUTPUT); // Set the buzzer pin as output
+noTone(buzpin);
+
+delay(2000); // Delay the start message display
+lcd.clear();
+}
+
+void loop() {
+float temperature = temperature reading(sensorPin);
+
+// If the reading is unreasonable (below 0°C or above 150°C)
+if (temperature < 0 || temperature > 150) {
+lcd. clear ();
+lcd. setCursor(0, 0);
+lcd. print("Error: Check sensor");
+Serial. println("Error: Invalid reading");
+} else {
+// Replace with value if reading is correct
+last temp = temp;
+
+// Display temperature
+lcd. clear ();
+lcd. setCursor(0, 0);
+lcd. print("Temperature:");
+lcd. print(round(temperature)); // Number of decimals
+lcd. print((char) 223); // Degree symbol
+lcd. print("C");
+
+// Print in Serial Monitor
+Serial. print("Temperature:");
+Serial. println(round(temperature)); // Print without decimals
+}
+
+// Buzzer to request temperature of 40
+if (temperature > 22) {
+tone(buzpin, 1000); // Buzzer on at 1000Hz
+} else {
+noTone(buzpin); // Buzzer off
+}
+
+delay(1000); // Delay 1 second
+}
